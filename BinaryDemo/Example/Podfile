@@ -1,0 +1,21 @@
+#use_frameworks!
+
+project 'Binary'
+
+target 'Binary_Example' do
+  pod 'Binary', :path => '../'
+  pod 'AFNetworking'
+
+  target 'Binary_Tests' do
+    inherit! :search_paths
+
+  end
+end
+
+#target 'Binary_lib' do
+#    pod 'AFNetworking'
+#end
+
+target 'Binary_framework' do
+    pod 'AFNetworking'
+end

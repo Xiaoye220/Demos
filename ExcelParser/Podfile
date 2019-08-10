@@ -1,0 +1,10 @@
+platform :ios,'8.0'
+
+target 'ExcelParser' do
+
+use_frameworks!
+pod 'SSZipArchive'
+pod 'SwiftyXMLParser'
+
+end
+

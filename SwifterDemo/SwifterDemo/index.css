@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "Microsoft Yahei";background:#fff;-webkit-text-size-adjust:100%;}
+em{font-style:normal}
+img{border:0;vertical-align:middle}
+p{word-wrap:break-word}
+.clearfix { clear:both; overflow:hidden }
+input,button,select,textarea{outline:none}
+:focus { outline:none; } 
+
+.wrap{ width:980px; margin:0 auto; }
+.left{ float:left;padding-left:35px; width:735px; font-size:18px;}
+.left b{ margin-top:25px; font-size:32px; color:#F47564; font-weight:normal; display:block;}
+.left p{ margin-top:20px; color:#A79F97;}
+.left p.style1{font-size:20px; color:#66605B;}
+.left p.style2{margin-top:20px;color:#F47564;font-size:20px;}
+
+.sname {
+    color:#F47564;
+    font-size:20px;
+}
+
+.file {
+    margin-top:20px;
+    position: relative;
+    display: inline-block;
+    background: #F9F5EC;
+    border: 1px solid #F9F5C8;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #F47564;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    font-size: 18px
+}
+.file input {
+    position: absolute;
+    font-size: 50px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.file:hover {
+    background: #F9F5C8;
+    border-color: #F9F5C8;
+    color: #F75E6B;
+    text-decoration: none;
+}
+
+.submit {
+    margin-left:20px;
+    margin-top:20px;
+    position: relative;
+    display: inline-block;
+    background: #F9F5EC;
+    border: 1px solid #F9F5C8;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #F47564;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    font-size: 18px
+}
+.submit:hover {
+    background: #F9F5C8;
+    border-color: #F9F5C8;
+    color: #F75E6B;
+    text-decoration: none;
+}
+
+

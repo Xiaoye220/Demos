@@ -1,0 +1,6 @@
+target 'OMTFoundation_Tests' do
+  pod 'OMTFoundation', :path => '../'
+  
+  pod 'AFNetworking'
+  
+end

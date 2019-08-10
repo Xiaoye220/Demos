@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Wi-Fi传文件</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" charset="utf-8">
+        
+    <script type="text/javascript">
+        function clickButton(){
+            document.location = "http://localhost:8080";
+        }
+    
+        window.onload=function(){
+            var fileName = GetQueryString("fileName");
+            var sizeStr = GetQueryString("size");
+            var size = parseInt(sizeStr)
+            if (size < 1024) {
+                document.getElementById("result").innerHTML = fileName+"("+size+"B)"+"  上传成功";
+            } else if (size < 1024*1024) {
+                size = (size/1024).toFixed(2);
+                document.getElementById("result").innerHTML = fileName+"("+size+"KB)"+"  上传成功";
+            } else if (size < 1024*1024*1024) {
+                size = (size/1024/1024).toFixed(2);
+                document.getElementById("result").innerHTML = fileName+"("+size+"MB)"+"  上传成功";
+            }
+        }
+    
+        function GetQueryString(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)
+                return decodeURI(r[2]);
+            return null;
+        }
+    
+    </script>
+</head>
+
+
+
+<body style="font:12px "Microsoft Yahei";background:#fff;-webkit-text-size-adjust:100%;">
+    <div class="wrap" style = "width:980px; margin:0 auto; ">
+        <div class="main clearfix">
+            <div class="left" >
+                <b>Wi-Fi 模式已开启</b>
+                <p class="style1">已连接到同局域网的名为<span id="sname">YZF</span>的设备上。</p>
+                <p>手机与电脑务必在同一Wi-Fi内，传输过程中请勿关闭手机上的Wi-Fi传输页面</p>
+            </div>
+            <div class="left">
+                <p id="result" class="style2">上传成功</p>
+                <input class="file" type="button" value="继续上传" onclick="clickButton()"/>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+</body></html>

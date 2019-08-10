@@ -1,0 +1,14 @@
+source 'https://github.com/Xiaoye220/Specs.git';
+source 'https://github.com/CocoaPods/Specs.git';
+
+platform :ios,'7.0'
+
+target 'OMTSocial_Example' do
+  pod 'OMTSocial', :path => '../'
+
+  target 'OMTSocial_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

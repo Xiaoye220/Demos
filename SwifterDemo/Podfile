@@ -1,0 +1,12 @@
+platform :ios,'8.0'
+
+target 'SwifterDemo' do
+
+use_frameworks!
+
+pod 'Swifter'
+
+
+
+end
+

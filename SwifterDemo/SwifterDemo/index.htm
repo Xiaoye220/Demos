@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Wi-Fi传文件</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" charset="utf-8">
+    
+    <script type="text/javascript">
+        var hasSub = false;
+        window.onload=function(){
+            getDeviceName();
+        }
+        function submitForm(){
+            if(hasSub) {
+                document.getElementById("uploading").innerHTML = "正在上传，请耐心等待...";
+                var t = setTimeout("document.myForm.submit();",50)
+            } else {
+                document.getElementById("uploading").innerHTML = "注意：请先选择文件";
+            }
+        }
+        function sub(obj){
+            hasSub = true
+            document.getElementById("uploading").innerHTML = "";
+            var file = obj.value;
+            var fileName = file.split("\\");
+            document.getElementById("text").innerHTML = fileName[fileName.length-1];
+            event.preventDefault();
+        }
+        function getDeviceName(){
+            var xmlhttp = new XMLHttpRequest();
+            
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    document.getElementById("sname").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","/getName",true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+
+
+<body style="font:12px "Microsoft Yahei";background:#fff;-webkit-text-size-adjust:100%;">
+<div class="wrap" style = "width:980px; margin:0 auto; ">
+    <div class="main clearfix">
+        <div class="left" >
+            <b>Wi-Fi 模式已开启</b>
+            <p class="style1">已连接到同局域网的名为 <span class="sname" id="sname"></span> 的设备上。</p>
+            <p>手机与电脑务必在同一Wi-Fi内，传输过程中请勿关闭手机上的Wi-Fi传输页面</p>
+            
+            <form name="myForm" action="/upload" enctype="multipart/form-data" method="POST">
+                <div class="file">
+                    <label id="text">选择文件</label>
+                    <input id="uploadfile" class="uploadfile" name="my_file1" type="file" onchange="sub(this)" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+                </div>
+                
+                <input class="submit" type="button" value="上传" onclick="submitForm()"/>
+            </form>
+            
+            <p>只支持excel格式</p>
+            
+            <p class="style2" id="uploading"></p>
+        </div>
+       
+    </div>
+    
+</div>
+
+
+</body></html>

@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240A138D6119F933A2814F39 /* Pods_AVFoundationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5512CB7A7D9FE97A8D8FAF /* Pods_AVFoundationDemo.framework */; };
+		2F184CB61FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F184CB41FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.swift */; };
+		2F184CB71FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F184CB51FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.xib */; };
+		2F814DA61FF0D933000104FD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DA51FF0D933000104FD /* Icon.swift */; };
+		2F814DAA1FF0DBF4000104FD /* WeiXinCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DA91FF0DBF4000104FD /* WeiXinCameraViewController.swift */; };
+		2F814DAC1FF0DDB6000104FD /* WeiXinFilmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DAB1FF0DDB6000104FD /* WeiXinFilmingView.swift */; };
+		2F814DAE1FF0EA0D000104FD /* VideoRecordViewController_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DAD1FF0EA0D000104FD /* VideoRecordViewController_2.swift */; };
+		2F814DB01FF0F031000104FD /* VideoRecordViewController_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DAF1FF0F031000104FD /* VideoRecordViewController_3.swift */; };
+		2F814DB31FF33127000104FD /* WeiXinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DB21FF33127000104FD /* WeiXinEditView.swift */; };
+		2F814DB51FF48170000104FD /* CapturePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DB41FF48170000104FD /* CapturePhotoViewController.swift */; };
+		2F814DBA1FF494BE000104FD /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DB91FF494BE000104FD /* iconfont.ttf */; };
+		2F814DC01FF4C841000104FD /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DBE1FF4C841000104FD /* MusicPlayerViewController.swift */; };
+		2F814DC31FF4C8DA000104FD /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DC21FF4C8DA000104FD /* MusicPlayerViewController.xib */; };
+		2F814DC51FF4CC99000104FD /* July - My Soul.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DC41FF4CC99000104FD /* July - My Soul.mp3 */; };
+		2F814DC91FF4D556000104FD /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DC81FF4D556000104FD /* cover.png */; };
+		2F814DCB1FF4DD6A000104FD /* 告白气球.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DCA1FF4DD6A000104FD /* 告白气球.mp4 */; };
+		2F814DCF1FF4DDB0000104FD /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F814DCD1FF4DDB0000104FD /* VideoPlayerViewController.swift */; };
+		2F814DD21FF4E371000104FD /* VideoPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F814DD11FF4E371000104FD /* VideoPlayerViewController.xib */; };
+		2FDC1D491FE3A4DC00BD86B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC1D481FE3A4DC00BD86B8 /* AppDelegate.swift */; };
+		2FDC1D4B1FE3A4DC00BD86B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC1D4A1FE3A4DC00BD86B8 /* ViewController.swift */; };
+		2FDC1D4E1FE3A4DC00BD86B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC1D4C1FE3A4DC00BD86B8 /* Main.storyboard */; };
+		2FDC1D501FE3A4DC00BD86B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC1D4F1FE3A4DC00BD86B8 /* Assets.xcassets */; };
+		2FDC1D531FE3A4DC00BD86B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC1D511FE3A4DC00BD86B8 /* LaunchScreen.storyboard */; };
+		2FDC1D5F1FE3A53100BD86B8 /* VideoRecordViewController_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC1D5E1FE3A53100BD86B8 /* VideoRecordViewController_1.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F184CB41FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerWithLoaderViewController.swift; sourceTree = "<group>"; };
+		2F184CB51FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerWithLoaderViewController.xib; sourceTree = "<group>"; };
+		2F814DA51FF0D933000104FD /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		2F814DA91FF0DBF4000104FD /* WeiXinCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiXinCameraViewController.swift; sourceTree = "<group>"; };
+		2F814DAB1FF0DDB6000104FD /* WeiXinFilmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiXinFilmingView.swift; sourceTree = "<group>"; };
+		2F814DAD1FF0EA0D000104FD /* VideoRecordViewController_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController_2.swift; sourceTree = "<group>"; };
+		2F814DAF1FF0F031000104FD /* VideoRecordViewController_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController_3.swift; sourceTree = "<group>"; };
+		2F814DB21FF33127000104FD /* WeiXinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiXinEditView.swift; sourceTree = "<group>"; };
+		2F814DB41FF48170000104FD /* CapturePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePhotoViewController.swift; sourceTree = "<group>"; };
+		2F814DB91FF494BE000104FD /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		2F814DBE1FF4C841000104FD /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		2F814DC21FF4C8DA000104FD /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
+		2F814DC41FF4CC99000104FD /* July - My Soul.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "July - My Soul.mp3"; sourceTree = "<group>"; };
+		2F814DC81FF4D556000104FD /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
+		2F814DCA1FF4DD6A000104FD /* 告白气球.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "告白气球.mp4"; sourceTree = "<group>"; };
+		2F814DCD1FF4DDB0000104FD /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		2F814DD11FF4E371000104FD /* VideoPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerViewController.xib; sourceTree = "<group>"; };
+		2FDC1D451FE3A4DC00BD86B8 /* AVFoundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FDC1D481FE3A4DC00BD86B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FDC1D4A1FE3A4DC00BD86B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2FDC1D4D1FE3A4DC00BD86B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FDC1D4F1FE3A4DC00BD86B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FDC1D521FE3A4DC00BD86B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2FDC1D541FE3A4DC00BD86B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FDC1D5E1FE3A53100BD86B8 /* VideoRecordViewController_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController_1.swift; sourceTree = "<group>"; };
+		50D465B9DE38F2EAB1126FFA /* Pods-AVFoundationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVFoundationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVFoundationDemo/Pods-AVFoundationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6EE6E77F2AF3B6869F807206 /* Pods-AVFoundationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVFoundationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVFoundationDemo/Pods-AVFoundationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AA5512CB7A7D9FE97A8D8FAF /* Pods_AVFoundationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVFoundationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FDC1D421FE3A4DC00BD86B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240A138D6119F933A2814F39 /* Pods_AVFoundationDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F814DA31FF0D779000104FD /* 微信拍摄 */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DA91FF0DBF4000104FD /* WeiXinCameraViewController.swift */,
+				2F814DAB1FF0DDB6000104FD /* WeiXinFilmingView.swift */,
+				2F814DB21FF33127000104FD /* WeiXinEditView.swift */,
+			);
+			path = "微信拍摄";
+			sourceTree = "<group>";
+		};
+		2F814DA41FF0D921000104FD /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DA51FF0D933000104FD /* Icon.swift */,
+			);
+			path = IconFont;
+			sourceTree = "<group>";
+		};
+		2F814DB61FF48532000104FD /* 照片拍摄 */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DB41FF48170000104FD /* CapturePhotoViewController.swift */,
+			);
+			path = "照片拍摄";
+			sourceTree = "<group>";
+		};
+		2F814DBB1FF4A289000104FD /* 音频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DBE1FF4C841000104FD /* MusicPlayerViewController.swift */,
+				2F814DC21FF4C8DA000104FD /* MusicPlayerViewController.xib */,
+				2F184CB41FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.swift */,
+				2F184CB51FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.xib */,
+			);
+			path = "音频播放";
+			sourceTree = "<group>";
+		};
+		2F814DCC1FF4DD92000104FD /* 视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DCD1FF4DDB0000104FD /* VideoPlayerViewController.swift */,
+				2F814DD11FF4E371000104FD /* VideoPlayerViewController.xib */,
+			);
+			path = "视频播放";
+			sourceTree = "<group>";
+		};
+		2FDC1D3C1FE3A4DC00BD86B8 = {
+			isa = PBXGroup;
+			children = (
+				2FDC1D471FE3A4DC00BD86B8 /* AVFoundationDemo */,
+				2FDC1D461FE3A4DC00BD86B8 /* Products */,
+				5221298516A167D90B60F3E6 /* Pods */,
+				E5AE351498F610815766252B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2FDC1D461FE3A4DC00BD86B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FDC1D451FE3A4DC00BD86B8 /* AVFoundationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FDC1D471FE3A4DC00BD86B8 /* AVFoundationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DA41FF0D921000104FD /* IconFont */,
+				2FDC1D5B1FE3A4F900BD86B8 /* ViewController */,
+				2FDC1D481FE3A4DC00BD86B8 /* AppDelegate.swift */,
+				2FDC1D4C1FE3A4DC00BD86B8 /* Main.storyboard */,
+				2FDC1D5A1FE3A4E900BD86B8 /* SupportFiles */,
+			);
+			path = AVFoundationDemo;
+			sourceTree = "<group>";
+		};
+		2FDC1D5A1FE3A4E900BD86B8 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DC81FF4D556000104FD /* cover.png */,
+				2F814DCA1FF4DD6A000104FD /* 告白气球.mp4 */,
+				2F814DC41FF4CC99000104FD /* July - My Soul.mp3 */,
+				2F814DB91FF494BE000104FD /* iconfont.ttf */,
+				2FDC1D4F1FE3A4DC00BD86B8 /* Assets.xcassets */,
+				2FDC1D511FE3A4DC00BD86B8 /* LaunchScreen.storyboard */,
+				2FDC1D541FE3A4DC00BD86B8 /* Info.plist */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		2FDC1D5B1FE3A4F900BD86B8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F814DCC1FF4DD92000104FD /* 视频播放 */,
+				2F814DBB1FF4A289000104FD /* 音频播放 */,
+				2F814DB61FF48532000104FD /* 照片拍摄 */,
+				2F814DA31FF0D779000104FD /* 微信拍摄 */,
+				2FDC1D5D1FE3A51400BD86B8 /* 视频录制 */,
+				2FDC1D5C1FE3A50700BD86B8 /* 首页 */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2FDC1D5C1FE3A50700BD86B8 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				2FDC1D4A1FE3A4DC00BD86B8 /* ViewController.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		2FDC1D5D1FE3A51400BD86B8 /* 视频录制 */ = {
+			isa = PBXGroup;
+			children = (
+				2FDC1D5E1FE3A53100BD86B8 /* VideoRecordViewController_1.swift */,
+				2F814DAD1FF0EA0D000104FD /* VideoRecordViewController_2.swift */,
+				2F814DAF1FF0F031000104FD /* VideoRecordViewController_3.swift */,
+			);
+			path = "视频录制";
+			sourceTree = "<group>";
+		};
+		5221298516A167D90B60F3E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50D465B9DE38F2EAB1126FFA /* Pods-AVFoundationDemo.debug.xcconfig */,
+				6EE6E77F2AF3B6869F807206 /* Pods-AVFoundationDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5AE351498F610815766252B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA5512CB7A7D9FE97A8D8FAF /* Pods_AVFoundationDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FDC1D441FE3A4DC00BD86B8 /* AVFoundationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FDC1D571FE3A4DC00BD86B8 /* Build configuration list for PBXNativeTarget "AVFoundationDemo" */;
+			buildPhases = (
+				D3011EB8D8B838CB3C5279A1 /* [CP] Check Pods Manifest.lock */,
+				2FDC1D411FE3A4DC00BD86B8 /* Sources */,
+				2FDC1D421FE3A4DC00BD86B8 /* Frameworks */,
+				2FDC1D431FE3A4DC00BD86B8 /* Resources */,
+				628AAF9327FA1CCA88B3E573 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVFoundationDemo;
+			productName = AVFoundationDemo;
+			productReference = 2FDC1D451FE3A4DC00BD86B8 /* AVFoundationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FDC1D3D1FE3A4DC00BD86B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Xiaoye;
+				TargetAttributes = {
+					2FDC1D441FE3A4DC00BD86B8 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2FDC1D401FE3A4DC00BD86B8 /* Build configuration list for PBXProject "AVFoundationDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FDC1D3C1FE3A4DC00BD86B8;
+			productRefGroup = 2FDC1D461FE3A4DC00BD86B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FDC1D441FE3A4DC00BD86B8 /* AVFoundationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FDC1D431FE3A4DC00BD86B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F814DC31FF4C8DA000104FD /* MusicPlayerViewController.xib in Resources */,
+				2F814DD21FF4E371000104FD /* VideoPlayerViewController.xib in Resources */,
+				2F184CB71FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.xib in Resources */,
+				2F814DBA1FF494BE000104FD /* iconfont.ttf in Resources */,
+				2F814DC51FF4CC99000104FD /* July - My Soul.mp3 in Resources */,
+				2FDC1D531FE3A4DC00BD86B8 /* LaunchScreen.storyboard in Resources */,
+				2FDC1D501FE3A4DC00BD86B8 /* Assets.xcassets in Resources */,
+				2F814DCB1FF4DD6A000104FD /* 告白气球.mp4 in Resources */,
+				2F814DC91FF4D556000104FD /* cover.png in Resources */,
+				2FDC1D4E1FE3A4DC00BD86B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		628AAF9327FA1CCA88B3E573 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVFoundationDemo/Pods-AVFoundationDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YFIconFont/YFIconFont.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YFIconFont.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVFoundationDemo/Pods-AVFoundationDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3011EB8D8B838CB3C5279A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVFoundationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FDC1D411FE3A4DC00BD86B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDC1D4B1FE3A4DC00BD86B8 /* ViewController.swift in Sources */,
+				2F814DB01FF0F031000104FD /* VideoRecordViewController_3.swift in Sources */,
+				2F184CB61FF5EFAD00D540EE /* MusicPlayerWithLoaderViewController.swift in Sources */,
+				2F814DB51FF48170000104FD /* CapturePhotoViewController.swift in Sources */,
+				2F814DAC1FF0DDB6000104FD /* WeiXinFilmingView.swift in Sources */,
+				2F814DA61FF0D933000104FD /* Icon.swift in Sources */,
+				2FDC1D491FE3A4DC00BD86B8 /* AppDelegate.swift in Sources */,
+				2F814DB31FF33127000104FD /* WeiXinEditView.swift in Sources */,
+				2F814DAA1FF0DBF4000104FD /* WeiXinCameraViewController.swift in Sources */,
+				2FDC1D5F1FE3A53100BD86B8 /* VideoRecordViewController_1.swift in Sources */,
+				2F814DCF1FF4DDB0000104FD /* VideoPlayerViewController.swift in Sources */,
+				2F814DC01FF4C841000104FD /* MusicPlayerViewController.swift in Sources */,
+				2F814DAE1FF0EA0D000104FD /* VideoRecordViewController_2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2FDC1D4C1FE3A4DC00BD86B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FDC1D4D1FE3A4DC00BD86B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2FDC1D511FE3A4DC00BD86B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FDC1D521FE3A4DC00BD86B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FDC1D551FE3A4DC00BD86B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FDC1D561FE3A4DC00BD86B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FDC1D581FE3A4DC00BD86B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D465B9DE38F2EAB1126FFA /* Pods-AVFoundationDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5ZRU68637;
+				INFOPLIST_FILE = AVFoundationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yzf.AVFoundationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FDC1D591FE3A4DC00BD86B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE6E77F2AF3B6869F807206 /* Pods-AVFoundationDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5ZRU68637;
+				INFOPLIST_FILE = AVFoundationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yzf.AVFoundationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FDC1D401FE3A4DC00BD86B8 /* Build configuration list for PBXProject "AVFoundationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDC1D551FE3A4DC00BD86B8 /* Debug */,
+				2FDC1D561FE3A4DC00BD86B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FDC1D571FE3A4DC00BD86B8 /* Build configuration list for PBXNativeTarget "AVFoundationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDC1D581FE3A4DC00BD86B8 /* Debug */,
+				2FDC1D591FE3A4DC00BD86B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FDC1D3D1FE3A4DC00BD86B8 /* Project object */;
+}

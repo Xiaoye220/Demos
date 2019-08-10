@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicPlayerViewController" customModule="AVFoundationDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="playButton" destination="0nj-cG-nkE" id="PSH-iN-K76"/>
+                <outlet property="playTime" destination="iZO-xQ-UNU" id="gNg-6c-DzG"/>
+                <outlet property="playbackSlider" destination="dga-kM-LJJ" id="zlX-g3-g4l"/>
+                <outlet property="view" destination="xfa-9s-IEX" id="2gq-hy-TeX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xfa-9s-IEX">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dga-kM-LJJ">
+                    <rect key="frame" x="18" y="120" width="259" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.70588235290000001" green="0.15686274510000001" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <connections>
+                        <action selector="playbackSliderValueChanged:" destination="-1" eventType="valueChanged" id="yny-WP-VPT"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-xQ-UNU">
+                    <rect key="frame" x="295" y="125" width="60" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-cG-nkE">
+                    <rect key="frame" x="20" y="190" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.70588235290000001" green="0.15686274510000001" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="GP3-qQ-KpC"/>
+                    </constraints>
+                    <state key="normal" title="播放">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="Tik-wr-GJe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dga-kM-LJJ" firstAttribute="top" secondItem="VFy-U2-J0Y" secondAttribute="top" constant="100" id="Acj-hf-0ah"/>
+                <constraint firstItem="0nj-cG-nkE" firstAttribute="top" secondItem="dga-kM-LJJ" secondAttribute="bottom" constant="40" id="C3u-cx-ds8"/>
+                <constraint firstItem="iZO-xQ-UNU" firstAttribute="leading" secondItem="dga-kM-LJJ" secondAttribute="trailing" constant="20" id="E7q-3g-T8g"/>
+                <constraint firstItem="VFy-U2-J0Y" firstAttribute="trailing" secondItem="dga-kM-LJJ" secondAttribute="trailing" constant="100" id="M55-ug-cRo"/>
+                <constraint firstItem="VFy-U2-J0Y" firstAttribute="trailing" secondItem="iZO-xQ-UNU" secondAttribute="trailing" constant="20" id="aCJ-dd-Two"/>
+                <constraint firstItem="iZO-xQ-UNU" firstAttribute="centerY" secondItem="dga-kM-LJJ" secondAttribute="centerY" id="m9h-bL-0fn"/>
+                <constraint firstItem="dga-kM-LJJ" firstAttribute="leading" secondItem="VFy-U2-J0Y" secondAttribute="leading" constant="20" id="nKc-6Y-Qiv"/>
+                <constraint firstItem="0nj-cG-nkE" firstAttribute="leading" secondItem="VFy-U2-J0Y" secondAttribute="leading" constant="20" id="to8-Zo-Xms"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VFy-U2-J0Y"/>
+            <point key="canvasLocation" x="-221" y="-87"/>
+        </view>
+    </objects>
+</document>

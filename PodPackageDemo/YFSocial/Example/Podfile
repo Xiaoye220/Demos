@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YFSocial_Example' do
+  pod 'YFSocial', :path => '../'
+
+  target 'YFSocial_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
