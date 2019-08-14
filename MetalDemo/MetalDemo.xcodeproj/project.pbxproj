@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2B00F52301164D00E51F97 /* RPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B00F42301164D00E51F97 /* RPViewController.swift */; };
+		2F2B00FA2302529D00E51F97 /* RPRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B00F92302529D00E51F97 /* RPRenderer.swift */; };
+		2F2B00FC2302544700E51F97 /* RPShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B00FB2302544700E51F97 /* RPShaders.metal */; };
+		2F2B01012302607400E51F97 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2B01002302607400E51F97 /* MetalKit.framework */; };
 		2F6F63A122F7C6DA00D6A967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F63A022F7C6DA00D6A967 /* AppDelegate.swift */; };
 		2F6F63A322F7C6DA00D6A967 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F63A222F7C6DA00D6A967 /* RootViewController.swift */; };
 		2F6F63A622F7C6DA00D6A967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6F63A422F7C6DA00D6A967 /* Main.storyboard */; };
@@ -19,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2B00F42301164D00E51F97 /* RPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPViewController.swift; sourceTree = "<group>"; };
+		2F2B00F92302529D00E51F97 /* RPRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPRenderer.swift; sourceTree = "<group>"; };
+		2F2B00FB2302544700E51F97 /* RPShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RPShaders.metal; sourceTree = "<group>"; };
+		2F2B00FE23025E2C00E51F97 /* RPShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPShaderTypes.h; sourceTree = "<group>"; };
+		2F2B01002302607400E51F97 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		2F6F639D22F7C6DA00D6A967 /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F63A022F7C6DA00D6A967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F6F63A222F7C6DA00D6A967 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2B01012302607400E51F97 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F2B00F32301162D00E51F97 /* RenderPrimitives */ = {
+			isa = PBXGroup;
+			children = (
+				2F2B00F42301164D00E51F97 /* RPViewController.swift */,
+				2F2B00F92302529D00E51F97 /* RPRenderer.swift */,
+				2F2B00FB2302544700E51F97 /* RPShaders.metal */,
+				2F2B00FE23025E2C00E51F97 /* RPShaderTypes.h */,
+			);
+			path = RenderPrimitives;
+			sourceTree = "<group>";
+		};
+		2F2B00FF2302607400E51F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F2B01002302607400E51F97 /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2F6F639422F7C6DA00D6A967 = {
 			isa = PBXGroup;
 			children = (
 				2F6F639F22F7C6DA00D6A967 /* MetalDemo */,
 				2F6F639E22F7C6DA00D6A967 /* Products */,
+				2F2B00FF2302607400E51F97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,7 @@
 		2F6F639F22F7C6DA00D6A967 /* MetalDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2F2B00F32301162D00E51F97 /* RenderPrimitives */,
 				2F6F63B822F7DC1700D6A967 /* DrawViewContents */,
 				2F6F63B422F7CA0800D6A967 /* Metal */,
 				2F6F63A022F7C6DA00D6A967 /* AppDelegate.swift */,
@@ -172,11 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6F63B322F7CA0100D6A967 /* MetalView.swift in Sources */,
+				2F2B00FC2302544700E51F97 /* RPShaders.metal in Sources */,
+				2F2B00F52301164D00E51F97 /* RPViewController.swift in Sources */,
 				2F6F63A322F7C6DA00D6A967 /* RootViewController.swift in Sources */,
 				2F6F63B722F7DA6400D6A967 /* Define.swift in Sources */,
 				2F6F63A122F7C6DA00D6A967 /* AppDelegate.swift in Sources */,
 				2F6F63BA22F7DC5300D6A967 /* DVCViewController.swift in Sources */,
 				2F6F63DF22F92B1700D6A967 /* DVCRenderer.swift in Sources */,
+				2F2B00FA2302529D00E51F97 /* RPRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
