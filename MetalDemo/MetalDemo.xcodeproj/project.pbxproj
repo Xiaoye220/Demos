@@ -28,6 +28,7 @@
 		2F2B00FB2302544700E51F97 /* RPShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RPShaders.metal; sourceTree = "<group>"; };
 		2F2B00FE23025E2C00E51F97 /* RPShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPShaderTypes.h; sourceTree = "<group>"; };
 		2F2B01002302607400E51F97 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		2F2B0142230656D600E51F97 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		2F6F639D22F7C6DA00D6A967 /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F63A022F7C6DA00D6A967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F6F63A222F7C6DA00D6A967 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 				2F6F63A722F7C6DB00D6A967 /* Assets.xcassets */,
 				2F6F63A922F7C6DB00D6A967 /* LaunchScreen.storyboard */,
 				2F6F63AC22F7C6DB00D6A967 /* Info.plist */,
+				2F2B0142230656D600E51F97 /* Header.h */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -365,6 +367,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yzf.MetalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MetalDemo/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,6 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yzf.MetalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MetalDemo/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

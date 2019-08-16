@@ -12,11 +12,12 @@ class RootViewController: UIViewController {
 
     enum Content: String {
         case drawViewContents = "Using Metal to Draw a View’s Contents"
+        case renderPrimitives = "Using a Render Pipeline to Render Primitives"
     }
     
     var tableView: UITableView!
     
-    var contents: [Content] = [.drawViewContents]
+    var contents: [Content] = [.drawViewContents, .renderPrimitives]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +52,16 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let content = contents[indexPath.row]
+        var controller: UIViewController
         switch content {
         case .drawViewContents:
-            let controller = DVCViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
+            controller = DVCViewController()
+            
+        case .renderPrimitives:
+            controller = RPViewController()
         }
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
