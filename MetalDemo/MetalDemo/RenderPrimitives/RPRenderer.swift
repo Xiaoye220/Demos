@@ -19,7 +19,7 @@ class RPRenderer: NSObject, MTKViewDelegate {
     
     var pipelineState: MTLRenderPipelineState!
     
-    var viewportSize: vector_uint2!
+    var viewportSize: vector_uint2 = vector_uint2()
     
     init(with mtkView: MTKView) {
         self.mtkView = mtkView
@@ -27,20 +27,21 @@ class RPRenderer: NSObject, MTKViewDelegate {
         self.commandQueue = self.device.makeCommandQueue()!
         
         let defaultLibrary: MTLLibrary = self.device.makeDefaultLibrary()!
+        // 获取对应的 Vertex Function，即在 metal 文件中声明的方法 vertexShader
         let vertexFunction: MTLFunction = defaultLibrary.makeFunction(name: "vertexShader")!
-        let fragmentFunction: MTLFunction = defaultLibrary.makeFunction(name: "vertexShader")!
+        // 获取对应的 Fragment Function，即在 metal 文件中声明的方法 fragmentShader
+        let fragmentFunction: MTLFunction = defaultLibrary.makeFunction(name: "fragmentShader")!
 
         let pipelineStateDescriptor: MTLRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineStateDescriptor.label = "Simple Pipeline"
         pipelineStateDescriptor.vertexFunction = vertexFunction
         pipelineStateDescriptor.fragmentFunction = fragmentFunction
+        // 设置 render targets 的 pixelFormat，即每个像素在内存中布局的格式
+        // 本例中只有一个 render target，并且由 MTKView 提供，因此直接取索引 0 的赋值为 MTKView 的 colorPixelFormat
+        // 渲染管线会将 fragment function 输出的内容按照 pixelFormat 的内存排布进行转换
         pipelineStateDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat
         
         do {
-            // Pipeline State creation could fail if the pipeline descriptor isn't set up properly.
-            //  If the Metal API validation is enabled, you can find out more information about what
-            //  went wrong.  (Metal API validation is enabled by default when a debug build is run
-            //  from Xcode.)
             self.pipelineState = try self.device.makeRenderPipelineState(descriptor: pipelineStateDescriptor)
         } catch {
             print(error)
@@ -54,35 +55,34 @@ class RPRenderer: NSObject, MTKViewDelegate {
     }
     
     func draw(in view: MTKView) {
+        // 声明三个顶点
         let triangleVertices = [RPVertex(position: vector_float2([250, -250]), color: vector_float4([1, 0, 0, 1])),
                                 RPVertex(position: vector_float2([-250, -250]), color: vector_float4([0, 1, 0, 1])),
                                 RPVertex(position: vector_float2([0, 250]), color: vector_float4([0, 0, 1, 1]))]
         
-        // Create a new command buffer for each render pass to the current drawable.
         let commandBuffer = self.commandQueue.makeCommandBuffer()!
         commandBuffer.label = "MyCommand"
         
-        // Obtain a renderPassDescriptor generated from the view's drawable textures.
         if let renderPassDescriptor: MTLRenderPassDescriptor = view.currentRenderPassDescriptor {
-            // Create a render command encoder.
             let renderEncoder: MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)!
             renderEncoder.label = "MyRenderEncoder"
             
-            // Set the region of the drawable to draw into.
-            let viewport = MTLViewport(originX: 0, originY: 0, width: Double(self.viewportSize!.x), height: Double(self.viewportSize!.y), znear: 0, zfar: 1)
+            // 设置可视区域 viewport
+            let viewport = MTLViewport(originX: 0, originY: 0, width: Double(self.viewportSize.x), height: Double(self.viewportSize.y), znear: 0, zfar: 1)
             renderEncoder.setViewport(viewport)
+            // 设置渲染管线状态对象 pipelineState
             renderEncoder.setRenderPipelineState(self.pipelineState)
             
-            // Pass in the parameter data
-            renderEncoder.setVertexBytes(triangleVertices, length: MemoryLayout.size(ofValue: triangleVertices), index: Int(RPVertexInputIndexVertices.rawValue))
-            renderEncoder.setVertexBytes(&self.viewportSize, length: MemoryLayout.size(ofValue: self.viewportSize), index: Int(RPVertexInputIndexViewportSize.rawValue))
+            // 设置顶点参数，根据 index 的不同对应不同的内存区域
+            // 以下两个方法会将参数传入 metal 文件的 Vertex Function 中执行
+            renderEncoder.setVertexBytes(triangleVertices, length: MemoryLayout<RPVertex>.size * 3, index: Int(RPVertexInputIndexVertices.rawValue))
+            renderEncoder.setVertexBytes(&self.viewportSize, length: MemoryLayout<vector_uint2>.size, index: Int(RPVertexInputIndexViewportSize.rawValue))
             
-            // Draw the triangle.
+            // 绘制三角形
             renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
             
             renderEncoder.endEncoding()
             
-            // Schedule a present once the framebuffer is complete using the current drawable.
             commandBuffer.present(view.currentDrawable!)
         }
         

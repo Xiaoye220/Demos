@@ -11,8 +11,7 @@
 
 #include <simd/simd.h>
 
-// Buffer index values shared between shader and C code to ensure Metal shader buffer inputs
-// match Metal API buffer set calls.
+// 用来区分顶点着色器输入参数对应的下标，它指明我们的数据是存放在哪块内存区域
 typedef enum RPVertexInputIndex
 {
     RPVertexInputIndexVertices     = 0,
