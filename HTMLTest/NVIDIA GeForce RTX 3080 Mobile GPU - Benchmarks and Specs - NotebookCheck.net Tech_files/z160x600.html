@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://dco-assets.everestads.net/ics-campaign//5031/t/7867/11/z160x600.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./AMOLibrary.js" charset="utf-8"></script>
+    <style media="screen">
+      body { margin: 0; padding: 0; }
+      iframe { border: none; }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function loadData() {
+        var replaceMacro = function(text, data) {
+          var macros = text.match(/\!\{(.*?)\}/g);
+          if(macros) {
+            macros.forEach(function(macro){
+              var macroText = macro.split('!{').join('').split('}').join('');
+              for(var key in data) { if(key == macroText) { macroText = data[key]; } }
+              text = text.split(macro).join(macroText);
+            });
+          }
+          return text;
+        }
+        var contentD = [
+          {
+            "name": "Microsoft",
+            "product_url": "https://office.com/",
+          }
+        ];
+
+        if(contentD && contentD.length) { contentD.forEach(function(data) { amo.registerContent(data); }); }
+        amo.registerVariation("layout", "AllUpAIIcons");
+        amo.registerVariation("textField1", "['<#2F2F2F>Powerful |features to |unleash your |best work','18.5px',16,78,'20','350', 'left']");
+        amo.registerVariation("textField2", "['<#737373>Plus 1 TB of OneDrive |cloud storage','11px',16,169,'13','350','left']");
+        amo.registerVariation("textField3", "na");
+        amo.registerVariation("textField4", "na");
+        amo.registerVariation("textField5", "na");
+        amo.registerVariation("ctaText", "LEARN MORE");
+        // amo.registerVariation("ctaArrowVisibleFlag", "!{passthroughfield2}");
+        amo.registerVariation("impressionTracker", "../../../../1x1.png?impressionTracker=" + Math.random());
+        amo.registerVariation("clickTracker", "../../../../1x1.png?clickTracker=" + Math.random());
+        amo.registerVariation("clickURL", "!{product_url}");
+        amo.registerVariation("dropdownClickURLs", "https://adobe.com/#Microsoft1^https://adobe.com/#Microsoft2^https://adobe.com/#Microsoft3");
+        var content = [], cam = {};
+        var cam = {
+          layout: amo.variation['layout'],
+          textField1: amo.variation['textField1'],
+          textField2: amo.variation['textField2'],
+          textField3: amo.variation['textField3'],
+          textField4: amo.variation['textField4'],
+          textField5: amo.variation['textField5'],
+          cta: amo.variation['ctaText'],
+          // ctaArrowVisibleFlag: amo.variation['ctaArrowVisibleFlag'],
+          impressionTracker: amo.variation['impressionTracker'],
+          clickTracker: amo.variation['clickTracker'],
+          url: amo.variation['clickURL'],
+          dropdownClickURLs: amo.variation['dropdownClickURLs'],
+        };
+        if(amo.content && amo.content.length) {
+          amo.content.forEach(function(data) {
+            content.push({
+              feedData: data,
+              layout: cam.layout,
+              textField1: cam.textField1,
+              textField2: cam.textField2,
+              textField3: cam.textField3,
+              textField4: cam.textField4,
+              textField5: cam.textField5,
+              ctaText: cam.cta,
+              // ctaArrowVisibleFlag: cam.ctaArrowVisibleFlag.toString().toLowerCase() == 'false' ? false : true,
+              ctaArrowVisibleFlag: true,
+              impressionTracker: cam.impressionTracker,
+              clickTracker: cam.clickTracker,
+              url: cam.url,
+              dropdownClickURLs: cam.dropdownClickURLs,
+            });
+          });
+          if(content && content.length) {
+            content.map(function(data){
+              for(var key in data) { data[key] = typeof data[key] == 'string' ? replaceMacro(data[key], data.feedData) : data[key]; }
+            });
+          }
+        }
+        window.adData = content[0], window.adClickUrl = adData.url;
+        window.url1 = adData.dropdownClickURLs.split('^')[0];
+        window.url2 = adData.dropdownClickURLs.split('^')[1];
+        window.url3 = adData.dropdownClickURLs.split('^')[2];
+        // document.querySelector('iframe').addEventListener("click", exitHandler.bind(this));
+        // function exitHandler() {
+        //   // window.open(clickTag);
+        //   amo.onDynAdClick(adData.feedData, "CLICK", adClickUrl);
+        // }
+        var textField1 = adData.textField1 && adData.textField1.toLowerCase() != 'na' ? adData.textField1 : ' ';
+        var textField2 = adData.textField2 && adData.textField2.toLowerCase() != 'na' ? adData.textField2 : ' ';
+        var textField3 = adData.textField3 && adData.textField3.toLowerCase() != 'na' ? adData.textField3 : ' ';
+        var textField4 = adData.textField4 && adData.textField4.toLowerCase() != 'na' ? adData.textField4 : ' ';
+        var textField5 = adData.textField5 && adData.textField5.toLowerCase() != 'na' ? adData.textField5 : ' ';
+        textField1=textField1.replace('-_-','—');textField2=textField2.replace('-_-','—');textField3=textField3.replace('-_-','—');textField4=textField4.replace('-_-','—');textField5=textField5.replace('-_-','—');
+        var ctaText = adData.ctaText && adData.ctaText.toLowerCase() != 'na' ? adData.ctaText : '';
+        ctaText = ctaText.length && ctaText.indexOf('<br>') != -1 ? ctaText.split('<br>').join('\n') : ctaText;
+        var impressionTracker = adData.impressionTracker && adData.impressionTracker.toLowerCase() != 'na' ? adData.impressionTracker : '';
+        var clickTracker = adData.clickTracker && adData.clickTracker.toLowerCase() != 'na' ? adData.clickTracker : '';
+        if(impressionTracker) {
+          var isn = 'data' in amo && 'isn' in amo.data ? amo.data.isn : '';
+          if(isn.length) { impressionTracker = impressionTracker.split('(t_td_isn)').join(isn); }
+          for(var i = 1; i<=5; i++) {
+              var trackingCode = 'data' in amo && 'data' in amo.data && 'atsParams' in amo.data.data && ('x2_tracking_code_'+i) in amo.data.data.atsParams ? amo.data.data.atsParams['x2_tracking_code_'+i] : '';
+              if(trackingCode.length){ impressionTracker = impressionTracker.split('$(t_qp_TC_'+i+')').join(trackingCode); }
+          }
+        }
+        var adUrl = '';
+        switch(adData.layout){
+          case 'AllUpAccessLifestyle' : adURL = 'AllUpAccessLifestyle/Office_FY20Q4_Cons_USA_160x600_BAN_AllUp_Access_Lifestyle_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'AllUpAccessScreens' : adURL = 'AllUpAccessScreens/Office_FY20Q4_Cons_USA_160x600_BAN_AllUp_Access_Screens_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'AllUpAIIcons' : adURL = 'AllUpAIIcons/Office_FY20Q4_Cons_USA_160x600_BAN_AllUp_AI_Icons_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'AllUpAIScreens' : adURL = 'AllUpAIScreens/Office_FY20Q4_Cons_USA_160x600_BAN_AllUp_AI_Screens_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'ExcelBudgeting' : adURL = 'ExcelBudgeting/O365_FY20Q4_Cons_USA_160x600_BAN_Excel_Budgeting_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'HeroAchieve' : adURL = 'HeroAchieve/O365_FY20Q4_Cons_USA_160x600_BAN_Hero_Achieve_Prospecting_English_NA_NA_ANI_LEA_NA_1.htm';break;
+          case 'HeroFamily' : adURL = 'HeroFamily/O365_FY20Q4_Cons_USA_160x600_BAN_Hero_Family_Prospecting_English_NA_NA_ANI_LEA_NA_1.htm';break;
+          case 'MoneyInExcel' : adURL = 'MoneyInExcel/M365_FY21Q1_Cons_USA_160x600_BAN_MoneyInExcel_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'OneDrive' : adURL = 'OneDrive/O365_FY20Q4_Cons_USA_160x600_BAN_OneDrive_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'PPT' : adURL = 'PPT/O365_FY20Q4_Cons_USA_160x600_BAN_PPT_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'Word' : adURL = 'Word/O365_FY20Q4_Cons_USA_160x600_BAN_Word_Retargeting_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'Teams' : adURL = 'Teams/O365_FY20Q4_SMB_USA_160x600_BAN_Teams_English_NA_NA_ANI_BN_NA_1.htm';break;
+          case 'DesignerPPT' : adURL = 'DesignerPPT/M365_FY20Q4_RemoteWork_GigWorker_USA_160x600_BAN_Designer_EasyRemote_English_NA_NA_SBAN_BN_NA_1.htm';break;
+          case 'WriterWord' : adURL = 'WriterWord/M365_FY20Q4_RemoteWork_GigWorker_USA_160x600_BAN_Writer_EasyRemote_English_NA_NA_SBAN_BN_NA_1.htm';break;
+          case 'ConsumerRefresh_Editor' : adURL = 'ConsumerRefresh_Editor/M365_FY21Q2_ConsumerRefresh_USA_160x600_BAN_Editor_English_NA_Standard_ANI_BN_NA_1.htm';break;
+          case 'ConsumerRefresh_OneDrive' : adURL = 'ConsumerRefresh_OneDrive/M365_FY21Q2ConsRefresh_USA_160x600_BAN_OneDrive_English_NA_Standard_ANI_BN_NA_1.htm';break;
+          case 'ConsumerRefresh_PowerPoint' : adURL = 'ConsumerRefresh_PowerPoint/M365_FY21Q2ConsRefresh_USA_160x600_BAN_PowerPoint_English_NA_Standard_ANI_BN_NA_1.htm';break;
+          case 'ConsumerRefresh_Word' : adURL = 'ConsumerRefresh_Word/M365_FY21Q2ConsRefresh_USA_160x600_BAN_Word_English_NA_Standard_ANI_BN_NA_1.htm';break;
+        }
+        var iframe = document.createElement('iframe');
+        iframe.src = adURL;
+        iframe.width = '160';
+        iframe.height = '600';
+        document.body.appendChild(iframe);
+        var bannerData = {
+          textField1: textField1,
+          textField2: textField2,
+          textField3: textField3,
+          textField4: textField4,
+          textField5: textField5,
+          ctaText: ctaText,
+          // CTAarrowVisible: [adData.ctaArrowVisibleFlag, 0, 0],
+          impressionTracker: impressionTracker,
+          clickTracker: clickTracker,
+        };
+        window.getBannerData = function(){ var obj = {}; for(var i in bannerData) { obj[i] = bannerData[i]; } return obj; }
+      }
+      loadData();
+    </script><iframe src="./Office_FY20Q4_Cons_USA_160x600_BAN_AllUp_Access_Screens_Retargeting_English_NA_NA_ANI_BN_NA_1.html" width="160" height="600"></iframe>
+  
+
+</body></html>
